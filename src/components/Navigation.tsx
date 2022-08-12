@@ -5,11 +5,11 @@ type Props = {};
 
 function Navigation({}: Props) {
 	return (
-		<nav className='flex justify-between items-center h-[60px] px-5 shadow-md bg-gray-700 text-white'>
-			<h3 className='font-bold text-3xl'>GitHuBerry Search</h3>
+		<nav className=' sm:flex flex-column sm:justify-between  sm:items-center py-1 px-5 shadow-md bg-blue-700 text-white text-center'>
+			<h3 className='font-bold text-3xl py-1'>GitHuBerry Search</h3>
 
 			<span className='text-2xl'>
-				<Link to='/' className='mr-2'>
+				<Link to='/' className='mr-4'>
 					Home
 				</Link>
 				<Link to='/favorites'>Favorites</Link>

@@ -9,11 +9,11 @@ function FavoritesPage({}: Props) {
 	if (favorites.length === 0) return <p className='text-center'>No Items.</p>;
 
 	return (
-		<div className='flex justify-center pt-10 mx-auto h-screen w-screen'>
-			<ul className='list-none'>
+		<div className='flex justify-center pt-10 mx-auto'>
+			<ul className='list-none overflow-hidden'>
 				{favorites.map((f) => (
-					<li key={f}>
-						<a href={f} target='_blank'>
+					<li className='p-2 bg-white m-2 overflow-hidden min-w-0' key={f}>
+						<a className='block w-full ' href={f} target='_blank'>
 							{f}
 						</a>
 					</li>

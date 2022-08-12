@@ -25,13 +25,15 @@ function HomePage({}: Props) {
 	};
 
 	return (
-		<div className='flex justify-center pt-10 mx-auto h-screen w-screen'>
-			{isError && <p className='text-center text-3xl text-red-700'>Something went wrong...</p>}
+		<div className='flex justify-center pt-10  items-center'>
+			{isError && (
+				<p className='text-center text-3xl text-red-700 w-full'>Something went wrong...</p>
+			)}
 
-			<div className='relative w-[560px] '>
+			<div className='relative w-[560px] px-2'>
 				<input
 					type='text'
-					className='border py-2 px-4 w-full h-[42px] mb-2'
+					className='border py-3 px-4 w-full h-[42px] mb-4 rounded-md'
 					placeholder='Search for Github username...'
 					value={search}
 					onChange={(e) => setSearch(e.target.value)}
@@ -50,7 +52,7 @@ function HomePage({}: Props) {
 					</ul>
 				)}
 
-				<div className='container'>
+				<div className='w-full overflow-hidden'>
 					{areReposLoading && <p className='text-center'>Repos are loading...</p>}
 
 					{repos?.map((repo) => (

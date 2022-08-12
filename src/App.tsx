@@ -5,13 +5,13 @@ import HomePage from './pages/HomePage';
 
 function App() {
 	return (
-		<>
+		<div className='flex-column  bg-gray-200  mx-auto min-h-screen w-full pb-3 '>
 			<Navigation />
 			<Routes>
 				<Route path='/' element={<HomePage />} />
 				<Route path='/favorites' element={<FavoritesPage />} />
 			</Routes>
-		</>
+		</div>
 	);
 }
 
